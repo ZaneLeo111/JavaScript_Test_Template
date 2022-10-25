@@ -5,9 +5,10 @@ class test_class {
     try {
       this.tryFunc("asd");
       this.tryFunc(1);
-    } catch (e) {
-      console.error(e.name);
-      console.log(e.message);
+    } catch (error) {
+      if (error.name == "TimeOutError") {
+        console.error(error);
+      }
     }
   }
 
